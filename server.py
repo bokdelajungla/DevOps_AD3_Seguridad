@@ -80,12 +80,7 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-f", '--file', type=str, help="nombre del fichero de persistencia", required=False, default=FILENAME)
     parser.add_argument("-p", '--port', type=int, help="numero de puerto de escucha", required=False, default=PORT)
-    parser.add_argument("-t", '--test', action='store_true', help="Levanta un servidor para los tests", required=False)
     args = parser.parse_args()
-    if(args.test):
-        args.port = 23456
-        args.file = "tests/test.txt"
-        print("Ejecutando el servidor de tests")
 
     print("Escuchando en puerto: ", args.port)
     return args.file, args.port
