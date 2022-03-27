@@ -5,37 +5,27 @@ una que guarda la cadena que se le envia como parámetro en un fichero
 y otro que devuelve el número de veces de una cadena aparece al menos una vez
 en cada una de las lineas del fichero, ignorando mayúsculas y tildes
 
-@autor: Jorge Sánchez-Alor
+@autor: Jorge Sánchez-Alor, Antonio De Gea Velasco, Adrian Rodriguez Montesinos
 
 '''
 
 # ***IMPORTS*** #
 # Empleamos la biblioteca FLASK para implementar el servicio web
-from flask import Flask
-from flask import request
-from flask import make_response
-from flask import jsonify
+from flask import Flask, request, jsonify, make_response
 
 # Para la base de datos y la encriptacion
 from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
+import uuid
 import datetime
+from functools import wraps
 
 # Hacemos uso de la biblioteca unicodedata para tratar las tildes y caracteres epeciales
 import unicodedata
 # Para hacer uso de argumentos
-import sys
 import argparse
-
-from flask import Flask, request, jsonify, make_response
-from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash, check_password_hash
-import uuid
-import jwt
-import datetime
-from functools import wraps
-
 
 
 # *** VARIABLES *** #
