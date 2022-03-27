@@ -14,7 +14,6 @@ en cada una de las lineas del fichero, ignorando mayúsculas y tildes
 from flask import Flask, request, jsonify, make_response
 
 # Para la base de datos y la encriptacion
-from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
