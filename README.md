@@ -41,6 +41,7 @@ Los dos endpoints son
 * /signup
 * /login
 * /users
+Hay que destacar que se usa SSL, por los que los endpoints ahora emplean el protocolo HTTPS (si se intenta acceder a ellos mediante HTTP dará un error).
 
 ### Signup
 Permite el registro de un nuevo usuario en la base de datos.
