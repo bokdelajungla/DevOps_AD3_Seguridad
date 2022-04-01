@@ -33,7 +33,7 @@ FILENAME = "cadenas.txt" #Fichero por defecto
 # Host
 HOST = "127.0.0.1"
 # Puerto
-PORT = 12345 #Puerto por defecto
+PORT = 12346 #Puerto por defecto
 
 # La aplicación a partir de la clase Flask
 app = Flask(__name__)
